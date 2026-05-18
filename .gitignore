@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .env
 data/
+api/_bundle.mjs
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +25,5 @@ data/
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*.local
