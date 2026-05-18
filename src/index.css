@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@import '@fontsource/mukta/400.css';
+@import '@fontsource/mukta/600.css';
+@import '@fontsource/noto-sans-telugu/400.css';
+
+@theme {
+  --color-primary: #c2185b;
+  --color-primary-dark: #880e4f;
+  --color-primary-mid: #e91e63;
+  --color-primary-light: #f8bbd9;
+  --color-primary-xlight: #fce4ec;
+}
+
+body {
+  margin: 0;
+  font-family: 'Mukta', 'Noto Sans Telugu', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
