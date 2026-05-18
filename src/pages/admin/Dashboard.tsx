@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { PageWrapper } from '../../components/layout/PageWrapper'
 import { apiGet } from '../../api/client'
 import {
@@ -40,6 +41,15 @@ export function Dashboard() {
 
   return (
     <PageWrapper title="Dashboard">
+      <Link
+        to="/admin/sir"
+        className="block mb-4 bg-primary text-white rounded-xl p-4 text-sm shadow-sm"
+      >
+        <p className="font-semibold">Telangana SIR — Phase 3</p>
+        <p className="opacity-90 text-xs mt-1">
+          Enumeration 25 Jun – 24 Jul 2026 · Tap for timeline & load 119 ACs
+        </p>
+      </Link>
       <div className="grid grid-cols-2 gap-3 mb-6">
         {cards.map((c) => (
           <div key={c.label} className="bg-white rounded-xl p-4 shadow-sm border border-primary-light">

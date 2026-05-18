@@ -1,0 +1,63 @@
+{
+  "title": "Special Intensive Revision (SIR) — Telangana",
+  "phase": "Phase-3 (nationwide voter list purification)",
+  "lastSirTelangana": 2002,
+  "qualifyingDate": "2026-10-01",
+  "ceo": "Chief Electoral Officer, Telangana",
+  "purpose": [
+    "Remove deceased, permanently shifted, duplicate or ineligible entries",
+    "Ensure no eligible citizen is left out",
+    "Correct errors and register new voters"
+  ],
+  "fieldProcess": [
+    "Door-to-door verification by Booth Level Officers (BLOs)",
+    "Pre-filled Enumeration Forms issued in duplicate to existing voters",
+    "Minimum three visit attempts if household is locked",
+    "2002 electoral roll used as historical reference for family linkage",
+    "Online form download/submission allowed; BLO physical verification still required",
+    "Supporting documents generally collected during claims & objections, not initial enumeration"
+  ],
+  "schedule": [
+    {
+      "phase": "Preparations & training",
+      "detail": "Area mapping, BLO training, form printing",
+      "start": "2026-06-15",
+      "end": "2026-06-24"
+    },
+    {
+      "phase": "House-to-house enumeration",
+      "detail": "BLO visits; distribute and collect enumeration forms",
+      "start": "2026-06-25",
+      "end": "2026-07-24"
+    },
+    {
+      "phase": "Draft electoral roll publication",
+      "date": "2026-07-31"
+    },
+    {
+      "phase": "Claims & objections",
+      "detail": "Form 6 (addition), Form 7 (deletion/objection), Form 8 (correction)",
+      "start": "2026-07-31",
+      "end": "2026-08-30"
+    },
+    {
+      "phase": "Final electoral roll publication",
+      "date": "2026-10-01"
+    }
+  ],
+  "reservationSummary": {
+    "totalAssemblySeats": 119,
+    "scReserved": 19,
+    "stReserved": 12
+  },
+  "sources": [
+    {
+      "label": "Times of India — Telangana SIR June 2026 schedule",
+      "url": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-sir-drive-begins-on-june-25-blos-to-visit-every-household/articleshow/131102158.cms"
+    },
+    {
+      "label": "The New Indian Express — SIR from June 25",
+      "url": "https://www.newindianexpress.com/states/telangana/2026/May/15/eci-to-begin-sir-of-electoral-rolls-in-telangana-from-june-25"
+    }
+  ]
+}

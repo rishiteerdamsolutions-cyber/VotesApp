@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 .env
-data/
+data/votermap-pg/
 api/_bundle.mjs
 
 # Editor directories and files

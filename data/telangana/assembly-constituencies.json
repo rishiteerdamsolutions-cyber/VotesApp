@@ -1,0 +1,1197 @@
+{
+  "updatedAt": "2026-05-18",
+  "source": "ECI Delimitation 2013 / CEO Telangana AC list",
+  "count": 119,
+  "constituencies": [
+    {
+      "acNumber": 1,
+      "name": "Sirpur",
+      "displayName": "AC 1 — Sirpur",
+      "district": "Kumuram Bheem Asifabad",
+      "reservation": null,
+      "corporation": "Kumuram Bheem Asifabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 2,
+      "name": "Chennur",
+      "displayName": "AC 2 — Chennur",
+      "district": "Mancherial",
+      "reservation": "SC",
+      "corporation": "Mancherial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 3,
+      "name": "Bellampalli",
+      "displayName": "AC 3 — Bellampalli",
+      "district": "Mancherial",
+      "reservation": "SC",
+      "corporation": "Mancherial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 4,
+      "name": "Mancherial",
+      "displayName": "AC 4 — Mancherial",
+      "district": "Mancherial",
+      "reservation": null,
+      "corporation": "Mancherial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 5,
+      "name": "Asifabad",
+      "displayName": "AC 5 — Asifabad",
+      "district": "Kumuram Bheem Asifabad",
+      "reservation": "ST",
+      "corporation": "Kumuram Bheem Asifabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 6,
+      "name": "Khanapur",
+      "displayName": "AC 6 — Khanapur",
+      "district": "Nirmal",
+      "reservation": "ST",
+      "corporation": "Nirmal",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 7,
+      "name": "Adilabad",
+      "displayName": "AC 7 — Adilabad",
+      "district": "Adilabad",
+      "reservation": null,
+      "corporation": "Adilabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 8,
+      "name": "Boath",
+      "displayName": "AC 8 — Boath",
+      "district": "Adilabad",
+      "reservation": "ST",
+      "corporation": "Adilabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 9,
+      "name": "Nirmal",
+      "displayName": "AC 9 — Nirmal",
+      "district": "Nirmal",
+      "reservation": null,
+      "corporation": "Nirmal",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 10,
+      "name": "Mudhole",
+      "displayName": "AC 10 — Mudhole",
+      "district": "Nirmal",
+      "reservation": null,
+      "corporation": "Nirmal",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 11,
+      "name": "Armur",
+      "displayName": "AC 11 — Armur",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 12,
+      "name": "Bodhan",
+      "displayName": "AC 12 — Bodhan",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 13,
+      "name": "Jukkal",
+      "displayName": "AC 13 — Jukkal",
+      "district": "Kamareddy",
+      "reservation": "SC",
+      "corporation": "Kamareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 14,
+      "name": "Banswada",
+      "displayName": "AC 14 — Banswada",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 15,
+      "name": "Yellareddy",
+      "displayName": "AC 15 — Yellareddy",
+      "district": "Kamareddy",
+      "reservation": null,
+      "corporation": "Kamareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 16,
+      "name": "Kamareddy",
+      "displayName": "AC 16 — Kamareddy",
+      "district": "Kamareddy",
+      "reservation": null,
+      "corporation": "Kamareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 17,
+      "name": "Nizamabad Urban",
+      "displayName": "AC 17 — Nizamabad Urban",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 18,
+      "name": "Nizamabad Rural",
+      "displayName": "AC 18 — Nizamabad Rural",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 19,
+      "name": "Balkonda",
+      "displayName": "AC 19 — Balkonda",
+      "district": "Nizamabad",
+      "reservation": null,
+      "corporation": "Nizamabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 20,
+      "name": "Koratla",
+      "displayName": "AC 20 — Koratla",
+      "district": "Jagtial",
+      "reservation": null,
+      "corporation": "Jagtial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 21,
+      "name": "Jagtial",
+      "displayName": "AC 21 — Jagtial",
+      "district": "Jagtial",
+      "reservation": null,
+      "corporation": "Jagtial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 22,
+      "name": "Dharmapuri",
+      "displayName": "AC 22 — Dharmapuri",
+      "district": "Jagtial",
+      "reservation": "SC",
+      "corporation": "Jagtial",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 23,
+      "name": "Ramagundam",
+      "displayName": "AC 23 — Ramagundam",
+      "district": "Peddapalli",
+      "reservation": null,
+      "corporation": "Peddapalli",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 24,
+      "name": "Manthani",
+      "displayName": "AC 24 — Manthani",
+      "district": "Peddapalli",
+      "reservation": null,
+      "corporation": "Peddapalli",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 25,
+      "name": "Peddapalle",
+      "displayName": "AC 25 — Peddapalle",
+      "district": "Peddapalli",
+      "reservation": null,
+      "corporation": "Peddapalli",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 26,
+      "name": "Karimnagar",
+      "displayName": "AC 26 — Karimnagar",
+      "district": "Karimnagar",
+      "reservation": null,
+      "corporation": "Karimnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 27,
+      "name": "Choppadandi",
+      "displayName": "AC 27 — Choppadandi",
+      "district": "Karimnagar",
+      "reservation": "SC",
+      "corporation": "Karimnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 28,
+      "name": "Vemulawada",
+      "displayName": "AC 28 — Vemulawada",
+      "district": "Rajanna Sircilla",
+      "reservation": null,
+      "corporation": "Rajanna Sircilla",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 29,
+      "name": "Sircilla",
+      "displayName": "AC 29 — Sircilla",
+      "district": "Rajanna Sircilla",
+      "reservation": null,
+      "corporation": "Rajanna Sircilla",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 30,
+      "name": "Manakondur",
+      "displayName": "AC 30 — Manakondur",
+      "district": "Karimnagar",
+      "reservation": "SC",
+      "corporation": "Karimnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 31,
+      "name": "Huzurabad",
+      "displayName": "AC 31 — Huzurabad",
+      "district": "Karimnagar",
+      "reservation": null,
+      "corporation": "Karimnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 32,
+      "name": "Husnabad",
+      "displayName": "AC 32 — Husnabad",
+      "district": "Siddipet",
+      "reservation": null,
+      "corporation": "Siddipet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 33,
+      "name": "Siddipet",
+      "displayName": "AC 33 — Siddipet",
+      "district": "Siddipet",
+      "reservation": null,
+      "corporation": "Siddipet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 34,
+      "name": "Medak",
+      "displayName": "AC 34 — Medak",
+      "district": "Medak",
+      "reservation": null,
+      "corporation": "Medak",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 35,
+      "name": "Narayankhed",
+      "displayName": "AC 35 — Narayankhed",
+      "district": "Sangareddy",
+      "reservation": null,
+      "corporation": "Sangareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 36,
+      "name": "Andole",
+      "displayName": "AC 36 — Andole",
+      "district": "Sangareddy",
+      "reservation": "SC",
+      "corporation": "Sangareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 37,
+      "name": "Narsapur",
+      "displayName": "AC 37 — Narsapur",
+      "district": "Medak",
+      "reservation": null,
+      "corporation": "Medak",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 38,
+      "name": "Zahirabad",
+      "displayName": "AC 38 — Zahirabad",
+      "district": "Sangareddy",
+      "reservation": "SC",
+      "corporation": "Sangareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 39,
+      "name": "Sangareddy",
+      "displayName": "AC 39 — Sangareddy",
+      "district": "Sangareddy",
+      "reservation": null,
+      "corporation": "Sangareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 40,
+      "name": "Patancheru",
+      "displayName": "AC 40 — Patancheru",
+      "district": "Sangareddy",
+      "reservation": null,
+      "corporation": "Sangareddy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 41,
+      "name": "Dubbak",
+      "displayName": "AC 41 — Dubbak",
+      "district": "Siddipet",
+      "reservation": null,
+      "corporation": "Siddipet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 42,
+      "name": "Gajwel",
+      "displayName": "AC 42 — Gajwel",
+      "district": "Siddipet",
+      "reservation": null,
+      "corporation": "Siddipet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 43,
+      "name": "Medchal",
+      "displayName": "AC 43 — Medchal",
+      "district": "Medchal Malkajgiri",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 44,
+      "name": "Malkajgiri",
+      "displayName": "AC 44 — Malkajgiri",
+      "district": "Medchal Malkajgiri",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 45,
+      "name": "Quthbullapur",
+      "displayName": "AC 45 — Quthbullapur",
+      "district": "Medchal Malkajgiri",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 46,
+      "name": "Kukatpally",
+      "displayName": "AC 46 — Kukatpally",
+      "district": "Medchal Malkajgiri",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 47,
+      "name": "Uppal",
+      "displayName": "AC 47 — Uppal",
+      "district": "Medchal Malkajgiri",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 48,
+      "name": "Ibrahimpatnam",
+      "displayName": "AC 48 — Ibrahimpatnam",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 49,
+      "name": "L. B. Nagar",
+      "displayName": "AC 49 — L. B. Nagar",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 50,
+      "name": "Maheshwaram",
+      "displayName": "AC 50 — Maheshwaram",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 51,
+      "name": "Rajendranagar",
+      "displayName": "AC 51 — Rajendranagar",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 52,
+      "name": "Serilingampally",
+      "displayName": "AC 52 — Serilingampally",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 53,
+      "name": "Chevella",
+      "displayName": "AC 53 — Chevella",
+      "district": "Ranga Reddy",
+      "reservation": "SC",
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 54,
+      "name": "Pargi",
+      "displayName": "AC 54 — Pargi",
+      "district": "Vikarabad",
+      "reservation": null,
+      "corporation": "Vikarabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 55,
+      "name": "Vicarabad",
+      "displayName": "AC 55 — Vicarabad",
+      "district": "Vikarabad",
+      "reservation": "SC",
+      "corporation": "Vikarabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 56,
+      "name": "Tandur",
+      "displayName": "AC 56 — Tandur",
+      "district": "Vikarabad",
+      "reservation": null,
+      "corporation": "Vikarabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 57,
+      "name": "Musheerabad",
+      "displayName": "AC 57 — Musheerabad",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 58,
+      "name": "Malakpet",
+      "displayName": "AC 58 — Malakpet",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 59,
+      "name": "Amberpet",
+      "displayName": "AC 59 — Amberpet",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 60,
+      "name": "Khairatabad",
+      "displayName": "AC 60 — Khairatabad",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 61,
+      "name": "Jubilee Hills",
+      "displayName": "AC 61 — Jubilee Hills",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 62,
+      "name": "Sanathnagar",
+      "displayName": "AC 62 — Sanathnagar",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 63,
+      "name": "Nampally",
+      "displayName": "AC 63 — Nampally",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 64,
+      "name": "Karwan",
+      "displayName": "AC 64 — Karwan",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 65,
+      "name": "Goshamahal",
+      "displayName": "AC 65 — Goshamahal",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 66,
+      "name": "Charminar",
+      "displayName": "AC 66 — Charminar",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 67,
+      "name": "Chandrayangutta",
+      "displayName": "AC 67 — Chandrayangutta",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 68,
+      "name": "Yakutpura",
+      "displayName": "AC 68 — Yakutpura",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 69,
+      "name": "Bahadurpura",
+      "displayName": "AC 69 — Bahadurpura",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 70,
+      "name": "Secunderabad",
+      "displayName": "AC 70 — Secunderabad",
+      "district": "Hyderabad",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 71,
+      "name": "Secunderabad Cantt.",
+      "displayName": "AC 71 — Secunderabad Cantt.",
+      "district": "Hyderabad",
+      "reservation": "SC",
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 72,
+      "name": "Kodangal",
+      "displayName": "AC 72 — Kodangal",
+      "district": "Vikarabad",
+      "reservation": null,
+      "corporation": "Vikarabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 73,
+      "name": "Narayanpet",
+      "displayName": "AC 73 — Narayanpet",
+      "district": "Narayanpet",
+      "reservation": null,
+      "corporation": "Narayanpet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 74,
+      "name": "Mahbubnagar",
+      "displayName": "AC 74 — Mahbubnagar",
+      "district": "Mahabubnagar",
+      "reservation": null,
+      "corporation": "Mahabubnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 75,
+      "name": "Jadcherla",
+      "displayName": "AC 75 — Jadcherla",
+      "district": "Mahabubnagar",
+      "reservation": null,
+      "corporation": "Mahabubnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 76,
+      "name": "Devarkadra",
+      "displayName": "AC 76 — Devarkadra",
+      "district": "Mahabubnagar",
+      "reservation": null,
+      "corporation": "Mahabubnagar",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 77,
+      "name": "Makthal",
+      "displayName": "AC 77 — Makthal",
+      "district": "Narayanpet",
+      "reservation": null,
+      "corporation": "Narayanpet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 78,
+      "name": "Wanaparthy",
+      "displayName": "AC 78 — Wanaparthy",
+      "district": "Wanaparthy",
+      "reservation": null,
+      "corporation": "Wanaparthy",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 79,
+      "name": "Gadwal",
+      "displayName": "AC 79 — Gadwal",
+      "district": "Jogulamba Gadwal",
+      "reservation": null,
+      "corporation": "Jogulamba Gadwal",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 80,
+      "name": "Alampur",
+      "displayName": "AC 80 — Alampur",
+      "district": "Jogulamba Gadwal",
+      "reservation": "SC",
+      "corporation": "Jogulamba Gadwal",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 81,
+      "name": "Nagarkurnool",
+      "displayName": "AC 81 — Nagarkurnool",
+      "district": "Nagarkurnool",
+      "reservation": null,
+      "corporation": "Nagarkurnool",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 82,
+      "name": "Achampet",
+      "displayName": "AC 82 — Achampet",
+      "district": "Nagarkurnool",
+      "reservation": "SC",
+      "corporation": "Nagarkurnool",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 83,
+      "name": "Kalwakurthy",
+      "displayName": "AC 83 — Kalwakurthy",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 84,
+      "name": "Shadnagar",
+      "displayName": "AC 84 — Shadnagar",
+      "district": "Ranga Reddy",
+      "reservation": null,
+      "corporation": "GHMC",
+      "city": "Telangana",
+      "inGhmcArea": true
+    },
+    {
+      "acNumber": 85,
+      "name": "Kollapur",
+      "displayName": "AC 85 — Kollapur",
+      "district": "Nagarkurnool",
+      "reservation": null,
+      "corporation": "Nagarkurnool",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 86,
+      "name": "Devarakonda",
+      "displayName": "AC 86 — Devarakonda",
+      "district": "Nalgonda",
+      "reservation": "ST",
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 87,
+      "name": "Nagarjuna Sagar",
+      "displayName": "AC 87 — Nagarjuna Sagar",
+      "district": "Nalgonda",
+      "reservation": null,
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 88,
+      "name": "Miryalaguda",
+      "displayName": "AC 88 — Miryalaguda",
+      "district": "Nalgonda",
+      "reservation": null,
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 89,
+      "name": "Huzurnagar",
+      "displayName": "AC 89 — Huzurnagar",
+      "district": "Suryapet",
+      "reservation": null,
+      "corporation": "Suryapet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 90,
+      "name": "Kodad",
+      "displayName": "AC 90 — Kodad",
+      "district": "Suryapet",
+      "reservation": null,
+      "corporation": "Suryapet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 91,
+      "name": "Suryapet",
+      "displayName": "AC 91 — Suryapet",
+      "district": "Suryapet",
+      "reservation": null,
+      "corporation": "Suryapet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 92,
+      "name": "Nalgonda",
+      "displayName": "AC 92 — Nalgonda",
+      "district": "Nalgonda",
+      "reservation": null,
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 93,
+      "name": "Munugode",
+      "displayName": "AC 93 — Munugode",
+      "district": "Nalgonda",
+      "reservation": null,
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 94,
+      "name": "Bhongir",
+      "displayName": "AC 94 — Bhongir",
+      "district": "Yadadri Bhuvanagiri",
+      "reservation": null,
+      "corporation": "Yadadri Bhuvanagiri",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 95,
+      "name": "Nakrekal",
+      "displayName": "AC 95 — Nakrekal",
+      "district": "Nalgonda",
+      "reservation": "SC",
+      "corporation": "Nalgonda",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 96,
+      "name": "Thungathurthi",
+      "displayName": "AC 96 — Thungathurthi",
+      "district": "Suryapet",
+      "reservation": "SC",
+      "corporation": "Suryapet",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 97,
+      "name": "Alair",
+      "displayName": "AC 97 — Alair",
+      "district": "Yadadri Bhuvanagiri",
+      "reservation": null,
+      "corporation": "Yadadri Bhuvanagiri",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 98,
+      "name": "Jangaon",
+      "displayName": "AC 98 — Jangaon",
+      "district": "Jangaon",
+      "reservation": null,
+      "corporation": "Jangaon",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 99,
+      "name": "Ghanpur (Station)",
+      "displayName": "AC 99 — Ghanpur (Station)",
+      "district": "Jangaon",
+      "reservation": "SC",
+      "corporation": "Jangaon",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 100,
+      "name": "Palakurthi",
+      "displayName": "AC 100 — Palakurthi",
+      "district": "Jangaon",
+      "reservation": null,
+      "corporation": "Jangaon",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 101,
+      "name": "Dornakal",
+      "displayName": "AC 101 — Dornakal",
+      "district": "Mahabubabad",
+      "reservation": "ST",
+      "corporation": "Mahabubabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 102,
+      "name": "Mahabubabad",
+      "displayName": "AC 102 — Mahabubabad",
+      "district": "Mahabubabad",
+      "reservation": "ST",
+      "corporation": "Mahabubabad",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 103,
+      "name": "Narsampet",
+      "displayName": "AC 103 — Narsampet",
+      "district": "Warangal Rural",
+      "reservation": null,
+      "corporation": "Warangal Rural",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 104,
+      "name": "Parkal",
+      "displayName": "AC 104 — Parkal",
+      "district": "Warangal Rural",
+      "reservation": null,
+      "corporation": "Warangal Rural",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 105,
+      "name": "Warangal West",
+      "displayName": "AC 105 — Warangal West",
+      "district": "Warangal Rural",
+      "reservation": null,
+      "corporation": "Warangal Rural",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 106,
+      "name": "Warangal East",
+      "displayName": "AC 106 — Warangal East",
+      "district": "Warangal Rural",
+      "reservation": null,
+      "corporation": "Warangal Rural",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 107,
+      "name": "Waradhanapet",
+      "displayName": "AC 107 — Waradhanapet",
+      "district": "Warangal Rural",
+      "reservation": "SC",
+      "corporation": "Warangal Rural",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 108,
+      "name": "Bhupalpalle",
+      "displayName": "AC 108 — Bhupalpalle",
+      "district": "Jayashankar Bhupalpalle",
+      "reservation": null,
+      "corporation": "Jayashankar Bhupalpalle",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 109,
+      "name": "Mulug",
+      "displayName": "AC 109 — Mulug",
+      "district": "Mulug",
+      "reservation": "ST",
+      "corporation": "Mulug",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 110,
+      "name": "Pinapaka",
+      "displayName": "AC 110 — Pinapaka",
+      "district": "Bhadradri Kothagudem",
+      "reservation": "ST",
+      "corporation": "Bhadradri Kothagudem",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 111,
+      "name": "Yellandu",
+      "displayName": "AC 111 — Yellandu",
+      "district": "Bhadradri Kothagudem",
+      "reservation": "ST",
+      "corporation": "Bhadradri Kothagudem",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 112,
+      "name": "Khammam",
+      "displayName": "AC 112 — Khammam",
+      "district": "Khammam",
+      "reservation": null,
+      "corporation": "Khammam",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 113,
+      "name": "Palair",
+      "displayName": "AC 113 — Palair",
+      "district": "Khammam",
+      "reservation": null,
+      "corporation": "Khammam",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 114,
+      "name": "Madhira",
+      "displayName": "AC 114 — Madhira",
+      "district": "Khammam",
+      "reservation": "SC",
+      "corporation": "Khammam",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 115,
+      "name": "Wyra",
+      "displayName": "AC 115 — Wyra",
+      "district": "Khammam",
+      "reservation": "ST",
+      "corporation": "Khammam",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 116,
+      "name": "Sathupalli",
+      "displayName": "AC 116 — Sathupalli",
+      "district": "Khammam",
+      "reservation": "SC",
+      "corporation": "Khammam",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 117,
+      "name": "Kothagudem",
+      "displayName": "AC 117 — Kothagudem",
+      "district": "Bhadradri Kothagudem",
+      "reservation": null,
+      "corporation": "Bhadradri Kothagudem",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 118,
+      "name": "Aswaraopeta",
+      "displayName": "AC 118 — Aswaraopeta",
+      "district": "Bhadradri Kothagudem",
+      "reservation": "ST",
+      "corporation": "Bhadradri Kothagudem",
+      "city": "Telangana",
+      "inGhmcArea": false
+    },
+    {
+      "acNumber": 119,
+      "name": "Bhadrachalam",
+      "displayName": "AC 119 — Bhadrachalam",
+      "district": "Bhadradri Kothagudem",
+      "reservation": "ST",
+      "corporation": "Bhadradri Kothagudem",
+      "city": "Telangana",
+      "inGhmcArea": false
+    }
+  ]
+}

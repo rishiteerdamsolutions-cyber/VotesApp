@@ -57,13 +57,22 @@ npx vercel env add JWT_SECRET
 After linking Neon, run `npm run db:push` once locally (with `DATABASE_URL` in `.env`) to create tables — already done if schema was pushed.
 
 4. Open http://localhost:5173 → **Setup admin** (username `admin`, password `1KTR@1`).
-5. Add constituency → divisions → representatives. Share auto-generated `Hyd53R1` credentials with reps.
+5. **Telangana SIR:** Admin → **SIR** tab → load 119 Assembly constituencies, then **Setup** → add divisions (BLO polling parts from CEO mapping).
+6. Or CLI: `npm run seed:telangana` (requires `DATABASE_URL` in `.env`).
+7. Add representatives per division. Share auto-generated `Hyd53R1` credentials with BLOs/reps.
 
 ## Scripts
 
 - `npm run dev` — Vite + API (port 3001)
 - `npm run build` — production build
 - `npm run db:push` — push Drizzle schema to Neon
+- `npm run seed:telangana` — seed 119 Telangana ACs + SIR schedule settings
+
+## Telangana SIR (Special Intensive Revision)
+
+Reference data lives in `data/telangana/` (schedule, 119 Assembly constituencies, GHMC structure notes, ECI form mapping). **Divisions** = BLO work areas / polling parts — add from CEO Telangana mapping (June 15–24), not auto-generated (especially GHMC’s 300 wards).
+
+Official portals: [CEO Telangana](https://ceotelangana.nic.in/), [electoral rolls](https://ceotserms2.telangana.gov.in/ts_erolls/rolls.aspx), [voter search](https://electoralsearch.eci.gov.in/).
 
 ## Rep workflow
 

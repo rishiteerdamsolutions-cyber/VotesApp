@@ -1,0 +1,20 @@
+{
+  "voterMapToSir": [
+    { "sirConcept": "Assembly Constituency (AC)", "voterMap": "Constituency", "example": "AC 57 — Musheerabad" },
+    { "sirConcept": "BLO work area / polling part", "voterMap": "Division", "example": "Part 142, Ward 53 segment" },
+    { "sirConcept": "BLO / enumerator", "voterMap": "Representative", "example": "Hyd57R1" },
+    { "sirConcept": "Enumeration form household", "voterMap": "Voter record", "example": "EPIC + Telugu/English names" },
+    { "sirConcept": "Deceased voter", "voterMap": "isDead", "example": "true" },
+    { "sirConcept": "Shifted / absent", "voterMap": "isImmigrated", "example": "true" },
+    { "sirConcept": "Duplicate / removed", "voterMap": "isAlienated", "example": "true" },
+    { "sirConcept": "New registration (Form 6)", "voterMap": "isNewVoter", "example": "true" },
+    { "sirConcept": "Door visit completed", "voterMap": "boothVisited", "example": "true" },
+    { "sirConcept": "Canvass note / not home", "voterMap": "Canvass log", "example": "outcome: not_home" }
+  ],
+  "officialForms": [
+    { "form": "Form 6", "use": "New voter inclusion" },
+    { "form": "Form 7", "use": "Objection to inclusion / deletion" },
+    { "form": "Form 8", "use": "Correction of particulars" },
+    { "form": "Form 8A", "use": "Transposition within constituency" }
+  ]
+}

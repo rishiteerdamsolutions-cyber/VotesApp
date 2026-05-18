@@ -1,0 +1,45 @@
+{
+  "body": "Greater Hyderabad Municipal Corporation (GHMC)",
+  "note": "GHMC underwent major delimitation in Dec 2025. Ward lists for SIR BLO mapping must come from the official CEO/GHMC allotment — not auto-generated here.",
+  "structure": {
+    "zones": 12,
+    "circles": 60,
+    "wards": 300,
+    "previousWards": 150,
+    "expandedAreaSqKm": 2053,
+    "mergedUlbs": "27 surrounding urban local bodies (7 municipal corporations, 20 municipalities)"
+  },
+  "hyderabadAssemblyConstituencies": {
+    "acRange": "57–71",
+    "count": 15,
+    "names": [
+      "Musheerabad",
+      "Malakpet",
+      "Amberpet",
+      "Khairatabad",
+      "Jubilee Hills",
+      "Sanathnagar",
+      "Nampally",
+      "Karwan",
+      "Goshamahal",
+      "Charminar",
+      "Chandrayangutta",
+      "Yakutpura",
+      "Bahadurpura",
+      "Secunderabad",
+      "Secunderabad Cantt."
+    ]
+  },
+  "greaterHyderabadAcRange": "43–53, 57–71",
+  "voterMapDivisionGuidance": "In VoterMap, create Divisions under each Assembly Constituency using CEO-assigned BLO areas: polling part numbers, ward segments, or sector codes from the June 15–24 mapping sheet.",
+  "sources": [
+    {
+      "label": "GHMC election annexure",
+      "url": "https://ghmc.gov.in/Election_Annexure.aspx"
+    },
+    {
+      "label": "Administrative divisions of Hyderabad (Wikipedia summary)",
+      "url": "https://en.wikipedia.org/wiki/Administrative_divisions_of_Hyderabad"
+    }
+  ]
+}

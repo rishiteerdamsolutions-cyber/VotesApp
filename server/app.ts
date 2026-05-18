@@ -20,6 +20,8 @@ import {
   hashPassword,
 } from './utils'
 import { requireAuth, requireAdmin, type AppVariables } from './middleware'
+import { getSirContext } from './sir-data'
+import { seedTelanganaConstituencies } from './seed-telangana'
 import dayjs from 'dayjs'
 
 const root = new Hono<{ Variables: AppVariables }>()
@@ -56,8 +58,11 @@ api.get('/health', (c) =>
     ok: true,
     db: true,
     local: useLocalDatabase(),
+    sir: 'Telangana Phase-3',
   })
 )
+
+api.get('/sir/context', (c) => c.json(getSirContext()))
 
 api.post('/auth/login', async (c) => {
   try {
@@ -233,6 +238,12 @@ authed.post('/constituencies', requireAdmin, async (c) => {
   const body = await c.req.json<{ name: string; corporation: string; city: string }>()
   const [row] = await db.insert(constituencies).values(body).returning()
   return c.json(row)
+})
+
+authed.post('/admin/seed-telangana', requireAdmin, async (c) => {
+  const db = getDb()
+  const result = await seedTelanganaConstituencies(db)
+  return c.json(result)
 })
 
 authed.delete('/constituencies/:id', requireAdmin, async (c) => {

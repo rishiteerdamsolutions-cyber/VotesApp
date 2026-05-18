@@ -9,6 +9,7 @@ import { Dashboard } from './pages/admin/Dashboard'
 import { Setup } from './pages/admin/Setup'
 import { Representatives } from './pages/admin/Representatives'
 import { Export } from './pages/admin/Export'
+import { SirGuide } from './pages/admin/SirGuide'
 import { RepLayout } from './pages/rep/RepLayout'
 import { RepHome } from './pages/rep/Home'
 import { AddVoter } from './pages/rep/AddVoter'
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="setup" element={<Setup />} />
             <Route path="reps" element={<Representatives />} />
             <Route path="export" element={<Export />} />
+            <Route path="sir" element={<SirGuide />} />
           </Route>
           <Route path="/rep" element={<RepLayout />}>
             <Route index element={<RepHome />} />

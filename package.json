@@ -17,7 +17,8 @@
     "db:push": "drizzle-kit push",
     "db:migrate": "tsx scripts/migrate-local.ts",
     "db:studio": "drizzle-kit studio",
-    "admin:reset-password": "tsx scripts/reset-admin-password.ts"
+    "admin:reset-password": "tsx scripts/reset-admin-password.ts",
+    "seed:telangana": "tsx scripts/seed-telangana-sir.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.4.5",

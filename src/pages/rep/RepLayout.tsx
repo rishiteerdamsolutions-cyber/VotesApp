@@ -10,7 +10,14 @@ const nav = [
 ]
 
 export function RepLayout() {
-  const user = useAuthStore((s) => s.user)
+  const { user, ready } = useAuthStore((s) => ({ user: s.user, ready: s.ready }))
+  if (!ready) {
+    return (
+      <div className="min-h-screen bg-primary-xlight flex items-center justify-center text-primary-dark">
+        Loading…
+      </div>
+    )
+  }
   if (!user) return <Navigate to="/login" replace />
   if (user.role !== 'representative') return <Navigate to="/admin" replace />
   return (
