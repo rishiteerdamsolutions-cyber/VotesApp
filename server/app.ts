@@ -27,6 +27,30 @@ const api = new Hono<{ Variables: AppVariables }>()
 
 root.use('*', cors({ origin: '*', allowHeaders: ['Content-Type', 'Authorization'] }))
 
+// Vercel may rewrite /api/foo -> /api; restore full path for routing
+root.use('*', async (c, next) => {
+  const url = new URL(c.req.url)
+  if (url.pathname === '/api' || url.pathname === '/api/') {
+    const forwarded =
+      c.req.header('x-vercel-original-url') ??
+      c.req.header('x-invoke-path') ??
+      c.req.header('x-forwarded-uri')
+    if (forwarded) {
+      const path = forwarded.startsWith('http')
+        ? new URL(forwarded).pathname
+        : forwarded.startsWith('/')
+          ? forwarded
+          : `/${forwarded}`
+      if (path.length > 4) {
+        return root.fetch(
+          new Request(new URL(path + url.search, url.origin), c.req.raw)
+        )
+      }
+    }
+  }
+  await next()
+})
+
 let dbInitPromise: Promise<void> | null = null
 root.use('*', async (c, next) => {
   try {
