@@ -1,5 +1,10 @@
 {
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }],
+  "functions": {
+    "api/[...path].ts": {
+      "maxDuration": 30
+    }
+  }
 }

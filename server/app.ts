@@ -27,12 +27,18 @@ const app = new Hono<{ Variables: AppVariables }>()
 app.use('*', cors({ origin: '*', allowHeaders: ['Content-Type', 'Authorization'] }))
 
 let dbInitPromise: Promise<void> | null = null
-app.use('*', async (_c, next) => {
-  if (!dbInitPromise) {
-    dbInitPromise = getDbAsync().then(() => undefined)
+app.use('*', async (c, next) => {
+  try {
+    if (!dbInitPromise) {
+      dbInitPromise = getDbAsync().then(() => undefined)
+    }
+    await dbInitPromise
+    await next()
+  } catch (e) {
+    console.error('[db] init failed:', e)
+    const msg = e instanceof Error ? e.message : 'Database unavailable'
+    return c.json({ error: msg }, 503)
   }
-  await dbInitPromise
-  await next()
 })
 
 app.get('/api/health', (c) =>
@@ -163,7 +169,7 @@ app.post('/api/auth/setup-admin', async (c) => {
         503
       )
     }
-    return c.json({ error: msg || 'Setup failed' }, 503)
+    return c.json({ error: msg || 'Setup failed' }, 500)
   }
 })
 

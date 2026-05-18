@@ -1,41 +1,39 @@
 import { drizzle as drizzleNeon } from 'drizzle-orm/neon-http'
-import { drizzle as drizzlePglite } from 'drizzle-orm/pglite'
 import { neon } from '@neondatabase/serverless'
-import { PGlite } from '@electric-sql/pglite'
-import { migrate } from 'drizzle-orm/pglite/migrator'
-import { mkdirSync } from 'fs'
-import { resolve } from 'path'
 import * as schema from '../drizzle/schema'
 import './env'
 import { useLocalDatabase } from './env'
 
 let dbInstance: ReturnType<typeof drizzleNeon<typeof schema>> | null = null
-let pgliteClient: PGlite | null = null
-let schemaReady = false
 
-async function ensurePgliteSchema(db: ReturnType<typeof drizzlePglite<typeof schema>>) {
-  if (schemaReady) return
+async function initPgliteLocal() {
+  const { mkdirSync } = await import('fs')
+  const { resolve } = await import('path')
+  const { PGlite } = await import('@electric-sql/pglite')
+  const { drizzle: drizzlePglite } = await import('drizzle-orm/pglite')
+  const { migrate } = await import('drizzle-orm/pglite/migrator')
+  const dataDir = resolve(process.cwd(), 'data', 'votermap-pg')
+  mkdirSync(resolve(process.cwd(), 'data'), { recursive: true })
+  const client = new PGlite(dataDir)
+  const db = drizzlePglite(client, { schema })
   await migrate(db, { migrationsFolder: resolve(process.cwd(), 'drizzle/migrations') })
-  schemaReady = true
+  return db as unknown as ReturnType<typeof drizzleNeon<typeof schema>>
 }
 
 export async function getDbAsync() {
   if (dbInstance) return dbInstance
 
   if (useLocalDatabase()) {
-    const dataDir = resolve(process.cwd(), 'data', 'votermap-pg')
-    mkdirSync(resolve(process.cwd(), 'data'), { recursive: true })
-    pgliteClient = new PGlite(dataDir)
-    const db = drizzlePglite(pgliteClient, { schema })
-    await ensurePgliteSchema(db)
-    dbInstance = db as unknown as ReturnType<typeof drizzleNeon<typeof schema>>
-    console.log('[db] Using local PGlite at', dataDir)
+    dbInstance = await initPgliteLocal()
+    console.log('[db] Using local PGlite')
     return dbInstance
   }
 
   const url = process.env.DATABASE_URL
   if (!url) {
-    throw new Error('DATABASE_URL is not set. Add Neon URL to .env or set USE_LOCAL_DB=true')
+    throw new Error(
+      'DATABASE_URL is not set. Add your Neon connection string in Vercel Environment Variables.'
+    )
   }
   const sql = neon(url)
   dbInstance = drizzleNeon(sql, { schema })
