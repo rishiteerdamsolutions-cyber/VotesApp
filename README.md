@@ -42,7 +42,7 @@ In [Vercel Dashboard](https://vercel.com) → your project → **Settings** → 
 |----------|--------|--------------|
 | `DATABASE_URL` | Your Neon connection string (`postgresql://...?sslmode=require`) | Production, Preview, Development |
 | `JWT_SECRET` | Long random string (e.g. `openssl rand -hex 32`) | Production, Preview, Development |
-| `USE_LOCAL_DB` | `false` | Production, Preview |
+| `USE_LOCAL_DB` | Not needed on Vercel — omit it | — |
 | `ADMIN_DEFAULT_PASSWORD` | `1KTR@1` (optional; first-time setup only) | Development (optional) |
 
 Do **not** set `VITE_API_URL` on Vercel — the app calls `/api` on the same domain.
