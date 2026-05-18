@@ -22,12 +22,13 @@ import {
 import { requireAuth, requireAdmin, type AppVariables } from './middleware'
 import dayjs from 'dayjs'
 
-const app = new Hono<{ Variables: AppVariables }>()
+const root = new Hono<{ Variables: AppVariables }>()
+const api = new Hono<{ Variables: AppVariables }>()
 
-app.use('*', cors({ origin: '*', allowHeaders: ['Content-Type', 'Authorization'] }))
+root.use('*', cors({ origin: '*', allowHeaders: ['Content-Type', 'Authorization'] }))
 
 let dbInitPromise: Promise<void> | null = null
-app.use('*', async (c, next) => {
+root.use('*', async (c, next) => {
   try {
     if (!dbInitPromise) {
       dbInitPromise = getDbAsync().then(() => undefined)
@@ -41,7 +42,7 @@ app.use('*', async (c, next) => {
   }
 })
 
-app.get('/api/health', (c) =>
+api.get('/health', (c) =>
   c.json({
     ok: true,
     db: true,
@@ -49,7 +50,7 @@ app.get('/api/health', (c) =>
   })
 )
 
-app.post('/api/auth/login', async (c) => {
+api.post('/auth/login', async (c) => {
   try {
     const { username, password, deviceId } = await c.req.json<{
       username: string
@@ -121,7 +122,7 @@ app.post('/api/auth/login', async (c) => {
   }
 })
 
-app.post('/api/auth/setup-admin', async (c) => {
+api.post('/auth/setup-admin', async (c) => {
   try {
     const db = getDb()
     const existing = await db
@@ -173,7 +174,7 @@ app.post('/api/auth/setup-admin', async (c) => {
   }
 })
 
-app.get('/api/auth/check', async (c) => {
+api.get('/auth/check', async (c) => {
   try {
     const db = getDb()
     const [admin] = await db
@@ -190,7 +191,7 @@ app.get('/api/auth/check', async (c) => {
 const authed = new Hono<{ Variables: AppVariables }>()
 authed.use('*', requireAuth)
 
-authed.get('/api/settings', async (c) => {
+authed.get('/settings', async (c) => {
   const db = getDb()
   const rows = await db.select().from(settings)
   const map: Record<string, string> = {}
@@ -200,7 +201,7 @@ authed.get('/api/settings', async (c) => {
   return c.json(map)
 })
 
-authed.put('/api/settings', requireAdmin, async (c) => {
+authed.put('/settings', requireAdmin, async (c) => {
   const db = getDb()
   const body = await c.req.json<Record<string, string>>()
   for (const [key, value] of Object.entries(body)) {
@@ -212,27 +213,27 @@ authed.put('/api/settings', requireAdmin, async (c) => {
   return c.json({ ok: true })
 })
 
-authed.get('/api/constituencies', async (c) => {
+authed.get('/constituencies', async (c) => {
   const db = getDb()
   const rows = await db.select().from(constituencies).orderBy(constituencies.name)
   return c.json(rows)
 })
 
-authed.post('/api/constituencies', requireAdmin, async (c) => {
+authed.post('/constituencies', requireAdmin, async (c) => {
   const db = getDb()
   const body = await c.req.json<{ name: string; corporation: string; city: string }>()
   const [row] = await db.insert(constituencies).values(body).returning()
   return c.json(row)
 })
 
-authed.delete('/api/constituencies/:id', requireAdmin, async (c) => {
+authed.delete('/constituencies/:id', requireAdmin, async (c) => {
   const db = getDb()
   const id = Number(c.req.param('id'))
   await db.delete(constituencies).where(eq(constituencies.id, id))
   return c.json({ ok: true })
 })
 
-authed.get('/api/divisions', async (c) => {
+authed.get('/divisions', async (c) => {
   const db = getDb()
   const constituencyId = c.req.query('constituencyId')
   const rows = constituencyId
@@ -244,7 +245,7 @@ authed.get('/api/divisions', async (c) => {
   return c.json(rows)
 })
 
-authed.post('/api/divisions', requireAdmin, async (c) => {
+authed.post('/divisions', requireAdmin, async (c) => {
   const db = getDb()
   const body = await c.req.json<{
     constituencyId: number
@@ -255,13 +256,13 @@ authed.post('/api/divisions', requireAdmin, async (c) => {
   return c.json(row)
 })
 
-authed.delete('/api/divisions/:id', requireAdmin, async (c) => {
+authed.delete('/divisions/:id', requireAdmin, async (c) => {
   const db = getDb()
   await db.delete(divisions).where(eq(divisions.id, Number(c.req.param('id'))))
   return c.json({ ok: true })
 })
 
-authed.get('/api/representatives', async (c) => {
+authed.get('/representatives', async (c) => {
   const db = getDb()
   const divisionId = c.req.query('divisionId')
   const rows = divisionId
@@ -278,7 +279,7 @@ authed.get('/api/representatives', async (c) => {
   )
 })
 
-authed.post('/api/representatives', requireAdmin, async (c) => {
+authed.post('/representatives', requireAdmin, async (c) => {
   const db = getDb()
   const body = await c.req.json<{
     surname: string
@@ -344,7 +345,7 @@ authed.post('/api/representatives', requireAdmin, async (c) => {
   })
 })
 
-authed.post('/api/representatives/:id/reset-device', requireAdmin, async (c) => {
+authed.post('/representatives/:id/reset-device', requireAdmin, async (c) => {
   const db = getDb()
   await db
     .update(representatives)
@@ -353,7 +354,7 @@ authed.post('/api/representatives/:id/reset-device', requireAdmin, async (c) => 
   return c.json({ ok: true })
 })
 
-authed.post('/api/representatives/:id/regenerate-password', requireAdmin, async (c) => {
+authed.post('/representatives/:id/regenerate-password', requireAdmin, async (c) => {
   const db = getDb()
   const plainPassword = generatePassword()
   await db
@@ -371,13 +372,13 @@ authed.post('/api/representatives/:id/regenerate-password', requireAdmin, async 
   })
 })
 
-authed.delete('/api/representatives/:id', requireAdmin, async (c) => {
+authed.delete('/representatives/:id', requireAdmin, async (c) => {
   const db = getDb()
   await db.delete(representatives).where(eq(representatives.id, Number(c.req.param('id'))))
   return c.json({ ok: true })
 })
 
-authed.get('/api/voters', async (c) => {
+authed.get('/voters', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const divisionId = c.req.query('divisionId')
@@ -409,7 +410,7 @@ function isValidDivisionId(id: number | null): id is number {
   return id !== null && !Number.isNaN(id)
 }
 
-authed.post('/api/voters', async (c) => {
+authed.post('/voters', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const body = await c.req.json<Record<string, unknown>>()
@@ -440,7 +441,7 @@ authed.post('/api/voters', async (c) => {
   }
 })
 
-authed.put('/api/voters/:id', async (c) => {
+authed.put('/voters/:id', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const id = Number(c.req.param('id'))
@@ -468,7 +469,7 @@ authed.put('/api/voters/:id', async (c) => {
   return c.json(row)
 })
 
-authed.delete('/api/voters/:id', async (c) => {
+authed.delete('/voters/:id', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const id = Number(c.req.param('id'))
@@ -490,7 +491,7 @@ authed.delete('/api/voters/:id', async (c) => {
   return c.json({ ok: true })
 })
 
-authed.post('/api/sync/push', async (c) => {
+authed.post('/sync/push', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const { items } = await c.req.json<{
@@ -542,7 +543,7 @@ authed.post('/api/sync/push', async (c) => {
   return c.json({ results })
 })
 
-authed.get('/api/sync/pull', async (c) => {
+authed.get('/sync/pull', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const since = c.req.query('since') ?? '1970-01-01'
@@ -559,7 +560,7 @@ authed.get('/api/sync/pull', async (c) => {
   return c.json({ voters: rows, syncedAt: new Date().toISOString() })
 })
 
-authed.get('/api/analytics/summary', async (c) => {
+authed.get('/analytics/summary', async (c) => {
   const db = getDb()
   const constituencyId = c.req.query('constituencyId')
   const divisionId = c.req.query('divisionId')
@@ -586,7 +587,7 @@ authed.get('/api/analytics/summary', async (c) => {
   })
 })
 
-authed.get('/api/analytics/by-division', async (c) => {
+authed.get('/analytics/by-division', async (c) => {
   const db = getDb()
   const rows = await db
     .select({
@@ -598,7 +599,7 @@ authed.get('/api/analytics/by-division', async (c) => {
   return c.json(rows)
 })
 
-authed.get('/api/analytics/caste', async (c) => {
+authed.get('/analytics/caste', async (c) => {
   const db = getDb()
   const divisionId = c.req.query('divisionId')
   const q = db
@@ -611,7 +612,7 @@ authed.get('/api/analytics/caste', async (c) => {
   return c.json(rows)
 })
 
-authed.get('/api/audit-logs', requireAdmin, async (c) => {
+authed.get('/audit-logs', requireAdmin, async (c) => {
   const db = getDb()
   const rows = await db
     .select()
@@ -621,7 +622,7 @@ authed.get('/api/audit-logs', requireAdmin, async (c) => {
   return c.json(rows)
 })
 
-authed.post('/api/canvass', async (c) => {
+authed.post('/canvass', async (c) => {
   const session = c.get('session')
   const db = getDb()
   const body = await c.req.json<typeof canvassLogs.$inferInsert>()
@@ -632,7 +633,7 @@ authed.post('/api/canvass', async (c) => {
   return c.json(row)
 })
 
-authed.get('/api/canvass/:voterId', async (c) => {
+authed.get('/canvass/:voterId', async (c) => {
   const db = getDb()
   const rows = await db
     .select()
@@ -642,6 +643,8 @@ authed.get('/api/canvass/:voterId', async (c) => {
   return c.json(rows)
 })
 
-app.route('/', authed)
+api.route('/', authed)
 
-export default app
+root.route('/api', api)
+
+export default root
