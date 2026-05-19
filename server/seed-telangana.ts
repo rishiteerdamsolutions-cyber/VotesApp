@@ -15,13 +15,14 @@ export async function seedTelanganaConstituencies(db: Db) {
     return { inserted: 0, skipped: true, message: 'Telangana ACs already seeded.' }
   }
 
-  for (const ac of acs) {
-    await db.insert(constituencies).values({
+  // Single bulk insert — 119 sequential inserts exceed Vercel's 30s function limit.
+  await db.insert(constituencies).values(
+    acs.map((ac) => ({
       name: ac.displayName,
       corporation: ac.corporation,
       city: ac.city,
-    })
-  }
+    }))
+  )
 
   const sirSettings: Record<string, string> = {
     sirState: 'Telangana',

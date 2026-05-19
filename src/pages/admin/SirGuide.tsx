@@ -37,9 +37,19 @@ export function SirGuide() {
   const [ctx, setCtx] = useState<SirContext | null>(null)
   const [seeding, setSeeding] = useState(false)
   const [filter, setFilter] = useState('')
+  const [dbCount, setDbCount] = useState<number | null>(null)
+  const [loadError, setLoadError] = useState('')
+
+  const refreshDbCount = () =>
+    apiGet<unknown[]>('/api/constituencies')
+      .then((rows) => setDbCount(rows.length))
+      .catch(() => setDbCount(null))
 
   useEffect(() => {
-    void apiGet<SirContext>('/api/sir/context').then(setCtx).catch(() => {})
+    void apiGet<SirContext>('/api/sir/context')
+      .then(setCtx)
+      .catch((e) => setLoadError(e instanceof Error ? e.message : 'Failed to load SIR data'))
+    void refreshDbCount()
   }, [])
 
   const seed = async () => {
@@ -50,6 +60,7 @@ export function SirGuide() {
         {}
       )
       toast(r.message, r.skipped ? 'info' : 'success')
+      await refreshDbCount()
     } catch (e) {
       toast(e instanceof Error ? e.message : 'Seed failed', 'error')
     } finally {
@@ -66,6 +77,9 @@ export function SirGuide() {
 
   return (
     <PageWrapper title="Telangana SIR">
+      {loadError && (
+        <p className="text-sm text-red-600 mb-4">{loadError}</p>
+      )}
       {!ctx ? (
         <p className="text-sm text-gray-600">Loading SIR reference data…</p>
       ) : (
@@ -75,11 +89,19 @@ export function SirGuide() {
             <p className="text-sm text-gray-600 mb-3">
               {ctx.program.reservationSummary.totalAssemblySeats} Assembly seats ({ctx.program.reservationSummary.scReserved} SC, {ctx.program.reservationSummary.stReserved} ST). Last SIR in Telangana: 2002.
             </p>
+            <p className="text-sm mb-3 rounded-lg bg-primary-xlight p-3 border border-primary-light">
+              <span className="font-medium text-primary-dark">Database:</span>{' '}
+              {dbCount === null
+                ? 'Could not read (log in as admin).'
+                : dbCount === 0
+                  ? '0 constituencies — tap the button below to populate Setup.'
+                  : `${dbCount} constituencies loaded — open Setup to add divisions.`}
+            </p>
             <Button fullWidth onClick={seed} disabled={seeding}>
-              {seeding ? 'Loading…' : 'Load 119 Assembly constituencies into database'}
+              {seeding ? 'Saving to database…' : 'Save 119 ACs to database (for Setup & Reps)'}
             </Button>
             <p className="text-xs text-gray-500 mt-2">
-              Safe to run once. Divisions (BLO polling parts) are still added manually in Setup from CEO mapping.
+              The list below is reference data only until you tap save. Divisions (BLO areas) are added in Setup.
             </p>
           </section>
 

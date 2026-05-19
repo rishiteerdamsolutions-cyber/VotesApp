@@ -52,6 +52,12 @@ export function Setup() {
 
   return (
     <PageWrapper title="Setup">
+      {constituencies.length === 0 && (
+        <p className="text-sm mb-4 rounded-xl bg-amber-50 border border-amber-200 p-3 text-amber-900">
+          No constituencies in the database yet. Go to the <strong>SIR</strong> tab and tap{' '}
+          <strong>Save 119 ACs to database</strong>, then return here.
+        </p>
+      )}
       <section className="mb-8">
         <h2 className="font-semibold text-primary-dark mb-3">Constituency</h2>
         <Input label="Name" value={cForm.name} onChange={(e) => setCForm({ ...cForm, name: e.target.value })} />
